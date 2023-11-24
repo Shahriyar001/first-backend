@@ -1,6 +1,7 @@
 import app from './app';
 import config from './app/config';
 import mongoose from 'mongoose';
+// const app = require('./app');
 
 async function main() {
   try {
