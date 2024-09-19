@@ -1,6 +1,6 @@
 import { User } from './user.model';
 
-const createStudentIntoDB = async (studentData: TStudent) => {
+const createStudentIntoDB = async (password: string, studentData: TStudent) => {
   // if (await Student.isUserExists(studentData.id)) {
   //   throw new Error('User already exists');
   // }
