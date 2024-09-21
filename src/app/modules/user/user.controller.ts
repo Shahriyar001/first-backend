@@ -12,7 +12,7 @@ const createStudent = async (req: Request, res: Response) => {
     //   })
     // })
 
-    const { student: studentData } = req.body;
+    const { password, student: studentData } = req.body;
 
     // data validation using joi
     // const { error, value } = studentValidationSchema.validate(studentData);
@@ -23,7 +23,7 @@ const createStudent = async (req: Request, res: Response) => {
 
     // const zodparsedData = studentValidationSchema.parse(studentData);
 
-    const result = await UserService.createStudentIntoDB();
+    const result = await UserService.createStudentIntoDB(password, studentData);
 
     // if (error) {
     //   res.status(500).json({
